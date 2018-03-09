@@ -1,0 +1,19 @@
+创建工程后选中项目文件，在Xcode菜单栏选中Editor——>Add Target——>Today Extension即创建成功；然后再TodayExtension文件夹下的info.plist文件中查看
+NSExtension配置。
+如果不用storyboard:
+<key>NSExtension</key>
+    <dict>
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.widget-extension</string>
+        <key>NSExtensionPrincipalClass</key>
+        <string>TodayViewController</string>
+    </dict>
+    有storyboard:
+    <key>NSExtension</key>
+    <dict>
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.widget-extension</string>
+        <key>NSExtensionPrincipalClass</key>
+        <string>MainInterface</string>
+    </dict>
+    将target置为TodayExtension运行项目，即进入手机的“今天”插件
